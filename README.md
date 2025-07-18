@@ -1,4 +1,4 @@
-<summary>📌 <strong>MIPS 32-bit Single-Cycle Processor (Verilog)</strong></summary>
+# MIPS 32-bit Single-Cycle Processor
 
 ### 📝 Description
 A fully modular 32-bit **Single-Cycle MIPS Processor** built using Verilog HDL, closely following the standard MIPS architecture.  
@@ -7,7 +7,7 @@ This project implements instruction fetch, decode, execute, memory access, and w
 ---
 
 ### 📊 Architecture Diagram  
-![MIPS Architecture Block Diagram](link_to_mips_block_diagram_image)
+![MIPS Architecture Block Diagram](https://files.catbox.moe/d5il9p.png)
 
 ---
 
