@@ -7,7 +7,7 @@ This project implements instruction fetch, decode, execute, memory access, and w
 ---
 
 ### 📊 Architecture Diagram  
-![MIPS Architecture Block Diagram](https://files.catbox.moe/d5il9p.png)
+![MIPS Architecture Block Diagram](https://github.com/Srikar109755/32-bit-Single_Cycle-MIPS-processor/blob/main/images/Block_Diagram.png)
 
 ---
 
@@ -37,7 +37,7 @@ This project implements instruction fetch, decode, execute, memory access, and w
 ---
 
 ### ⚙️ Processor Datapath  
-![MIPS Datapath Diagram](link_to_datapath_image)
+![MIPS Datapath Diagram](https://github.com/Srikar109755/32-bit-Single_Cycle-MIPS-processor/blob/main/images/DataPath_Diagram.png)
 
 ---
 
@@ -60,8 +60,8 @@ This project implements instruction fetch, decode, execute, memory access, and w
 
 ---
 
-### 🔍 Sample Waveform (optional)  
-![Simulation Waveform](link_to_waveform_image)
+### 🔍 Sample Waveform  
+![Simulation Waveform](https://github.com/Srikar109755/32-bit-Single_Cycle-MIPS-processor/blob/main/Outputs/Waveform.png)
 
 ---
 
@@ -84,6 +84,6 @@ Time    PC        Instr     $s0     $s1     Mem[16]
 ---
 
 ### 📜 License
-This Code is use for the educational purposes only.
+This Code is used for the educational purposes only.
 
 </details>
