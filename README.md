@@ -84,6 +84,6 @@ Time    PC        Instr     $s0     $s1     Mem[16]
 ---
 
 ### 📜 License
-MIT License
+This Code is use for the educational purposes only.
 
 </details>
