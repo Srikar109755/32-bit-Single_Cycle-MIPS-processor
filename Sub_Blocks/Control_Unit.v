@@ -20,6 +20,7 @@ module Control_Unit(
     parameter SW     = 6'b101011;
     parameter BEQ    = 6'b000100;
     parameter JUMP   = 6'b000010;
+    parameter ADDI   = 6'b001000;
 
 
     always @(*) begin
@@ -34,31 +35,37 @@ module Control_Unit(
         Jump     = 1'b0;
         ALUOp    = 2'b00;
 
+        
         case(opcode)
-            R_TYPE: begin // add, sub
-                RegDst   = 1'b1;
-                RegWrite = 1'b1;
-                ALUOp    = 2'b10;
-            end
-            LW: begin // Load Word
-                ALUSrc   = 1'b1;
-                MemtoReg = 1'b1;
-                RegWrite = 1'b1;
-                MemRead  = 1'b1;
-                ALUOp    = 2'b00; // ALU performs addition for address
-            end
-            SW: begin // Store Word
-                ALUSrc   = 1'b1;
-                MemWrite = 1'b1;
-                ALUOp    = 2'b00; // ALU performs addition for address
-            end
-            BEQ: begin // Branch if Equal
-                Branch   = 1'b1;
-                ALUOp    = 2'b01; // ALU performs subtraction for comparison
-            end
-            JUMP: begin // Jump
-                Jump     = 1'b1;
-            end
+            R_TYPE: begin                                   // add, sub
+                    RegDst=1; 
+                    RegWrite=1; 
+                    ALUOp=2'b10; 
+                    end 
+            ADDI: begin                                     // ADDI
+                    ALUSrc=1; 
+                    RegWrite=1; 
+                    ALUOp=2'b00; 
+                  end 
+            LW: begin                                       // Load Word
+                    ALUSrc=1; 
+                    MemtoReg=1; 
+                    RegWrite=1; 
+                    MemRead=1; 
+                    ALUOp=2'b00;                            // ALU performs addition for address
+                end 
+            SW: begin                                       // Store Word
+                    ALUSrc=1; 
+                    MemWrite=1; 
+                    ALUOp=2'b00;                            // ALU performs addition for address
+                end 
+            BEQ: begin                                      // Branch if Equal
+                    Branch=1; 
+                    ALUOp=2'b01;                            // ALU performs subtraction for comparison
+                 end 
+            JUMP: begin                                     // Jump
+                    Jump=1; 
+                  end
         endcase
     end
 endmodule
