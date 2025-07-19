@@ -29,10 +29,10 @@ module ALU_Control(
                     FUNCT_SUB: alu_op_out = ALU_SUB;
                     
                     // Adding other R-type functions here (AND, OR, SLT)
-                    default:   alu_op_out = 4'bxxxx;                                // Undefined
+                    default:   alu_op_out = 4'b0000;                                // Undefined
                 endcase
             end
-            default: alu_op_out = 4'bxxxx;                                          // Undefined
+            default: alu_op_out = 4'b0000;                                          // Undefined
         endcase
     end
 endmodule
