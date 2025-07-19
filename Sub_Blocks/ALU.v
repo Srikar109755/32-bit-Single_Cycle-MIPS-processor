@@ -23,7 +23,7 @@ module ALU(
             ALU_ADD: result = a + b;
             ALU_SUB: result = a - b;
             ALU_AND: result = a & b;
-            ALU_OR:  result = a | b;
+            ALU_OR : result = a | b;
             default: result = 32'hxxxxxxxx;
         endcase
         zero = (result == 32'b0);
