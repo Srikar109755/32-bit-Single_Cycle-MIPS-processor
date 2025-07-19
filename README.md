@@ -84,6 +84,5 @@ Time    PC        Instr     $s0     $s1     Mem[16]
 ---
 
 ### 📜 License
-This Code is used for the educational purposes only.
-
+This project is open-source for educational and personal learning purposes.
 </details>
