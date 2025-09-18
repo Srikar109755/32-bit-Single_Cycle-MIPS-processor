@@ -1,17 +1,17 @@
 # MIPS 32-bit Single-Cycle Processor
 
-### 📝 Description
+### Description
 A fully modular 32-bit **Single-Cycle MIPS Processor** built using Verilog HDL, closely following the standard MIPS architecture.  
 This project implements instruction fetch, decode, execute, memory access, and write-back stages in a **single clock cycle**.
 
 ---
 
-### 📊 Architecture Diagram  
+### Architecture Diagram  
 ![MIPS Architecture Block Diagram](https://github.com/Srikar109755/32-bit-Single_Cycle-MIPS-processor/blob/main/images/Block_Diagram.png)
 
 ---
 
-### 🧩 Features
+### Features
 - Supports **R-type**, **LW**, **SW**, **BEQ**, and **JUMP** instructions  
 - Modular structure for each pipeline stage  
 - Self-checking **Testbench** with initial register/memory loading  
@@ -20,7 +20,7 @@ This project implements instruction fetch, decode, execute, memory access, and w
 
 ---
 
-### 📂 File Structure
+### File Structure
 ```
 ├── mips_processor.v         # Top-level processor module
 ├── pc_register.v            # Program counter logic
@@ -36,12 +36,12 @@ This project implements instruction fetch, decode, execute, memory access, and w
 
 ---
 
-### ⚙️ Processor Datapath  
+### Processor Datapath  
 ![MIPS Datapath Diagram](https://github.com/Srikar109755/32-bit-Single_Cycle-MIPS-processor/blob/main/images/DataPath_Diagram.png)
 
 ---
 
-### 📌 Supported Instructions
+### Supported Instructions
 | Instruction | Type   | Example               | Function                                |
 |------------|--------|------------------------|------------------------------------------|
 | `add`      | R-type | `add $s0, $t1, $t2`    | `$s0 = $t1 + $t2`                        |
@@ -53,19 +53,19 @@ This project implements instruction fetch, decode, execute, memory access, and w
 
 ---
 
-### ▶️ How to Simulate
+### How to Simulate
 1. Load all `.v` files into your Verilog simulator (ModelSim, Vivado, Icarus, etc.)
 2. Set `tb_mips_processor.v` as the top module
 3. Run simulation and observe output using `$display` or waveform viewer
 
 ---
 
-### 🔍 Sample Waveform  
+### Sample Waveform  
 ![Simulation Waveform](https://github.com/Srikar109755/32-bit-Single_Cycle-MIPS-processor/blob/main/Outputs/Waveform.png)
 
 ---
 
-### 📌 Example Output (Console)
+### Example Output (Console)
 ```
 Time    PC        Instr     $s0     $s1     Mem[16]
 20      00000000 012A8020   15      0       0
@@ -75,14 +75,10 @@ Time    PC        Instr     $s0     $s1     Mem[16]
 
 ---
 
-### 🧪 Testbench Highlights
+### Testbench Highlights
 - Initializes registers with known values  
 - Loads instructions into memory using `imem[]`  
 - Runs sample program with ALU ops, memory access, and control flow  
 - Monitors output of `$s0`, `$s1`, and `mem[16]` during runtime  
 
 ---
-
-### 📜 License
-This project is open-source for educational and personal learning purposes.
-</details>
